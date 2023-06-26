@@ -2,19 +2,18 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="icon" href="%PUBLIC_URL%/assets/icon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
     <meta
       name="description"
       content="Web site created using create-react-app"
     />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
     <!--
       manifest.json provides metadata used when your web app is installed on a
       user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
     -->
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
     <!--
       Notice the use of %PUBLIC_URL% in the tags above.
       It will be replaced with the URL of the `public` folder during the build.
@@ -24,11 +23,87 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
-    <title>React App</title>
+    <title>Alicia Kirana</title>
+
+    <!-- Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Unbounded">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter">
+
+    <!-- Tailwind & Styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+          theme: {
+              extend: {
+                  colors: {
+                      "background": "F3F3F1"
+                  },
+                  minHeight: {
+                    '6/12': '50%',
+                    '9/12': '75%',
+                  }
+              },
+              fontFamily: {
+                'primary': 'Inter',
+              },
+          }
+      }
+    </script>
+    <style>
+      * {
+        font-family: 'Unbounded';
+        font-size: 12px;
+      }
+  
+      p, strong {
+        font-family: 'Inter';
+        font-size: 16px;
+      }
+
+      strong {
+        font-weight: bolder;
+      }
+  
+      *, *::before, *::after {
+          box-sizing: border-box;
+      }
+    </style>
   </head>
-  <body>
+  <body class="min-h-screen flex flex-col bg-background"> 
     <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
+
+    <nav class="bg-white sticky top-0 border-gray-200 px-6 sm:px-4 py-4">
+      <div class="container flex flex-wrap justify-between items-center mx-auto w-full">
+        <a href="%PUBLIC_URL%/" class="flex items-center">
+          <span class="self-center text-xl text-gray-900 font-semibold whitespace-nowrap">Alicia Kirana</span>
+        </a>
+
+        <button id="hamburgerNavbar" data-collapse-toggle="mobile-menu-2" type="button" class="inline-flex items-center p-2 ml-1 text-sm text-gray-500 rounded-lg hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 md:hidden" aria-controls="mobile-menu-2" aria-expanded="false">
+          <span class="sr-only">Open main menu</span>
+          <svg class="w-6 h-6 fill-orange-600" aria-hidden="true" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
+        </button>
+    
+        <!-- Main Navbar -->
+        <div class="hidden w-full md:block md:order-1 md:w-auto" id="mobile-menu-2">
+          <ul class="flex flex-col p-4 mt-4 bg-gray-50 rounded-lg md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:bg-white">
+            <li>
+              <a href="%PUBLIC_URL%/" class="block border md:border-0 py-4 pr-4 pl-3 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-orange-600 md:p-0  ">About Me</a>
+            </li>
+            <li>
+              <a href="%PUBLIC_URL%/" class="block border md:border-0 py-4 pr-4 pl-3 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-orange-600 md:p-0  ">Experiences</a>
+            </li>
+            <li>
+              <a href="%PUBLIC_URL%/" class="block border md:border-0 py-4 pr-4 pl-3 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-orange-600 md:p-0  ">Projects</a>
+            </li>
+            <li>
+              <a href="%PUBLIC_URL%/" class="block border md:border-0 py-4 pr-4 pl-3 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-orange-600 md:p-0">Contacts</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div id="root" class="h-full place-content-center justify-center items-center p-0 my-auto"></div>
     <!--
       This HTML file is a template.
       If you open it directly in the browser, you will see an empty page.
@@ -40,4 +115,15 @@
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
   </body>
+
+  <script>
+    const hamburgerNavbar = document.querySelector("#hamburgerNavbar")
+
+    if (hamburgerNavbar !== null) {
+        hamburgerNavbar.addEventListener('click', () => {
+            const navbarItems = document.querySelector("#mobile-menu-2")
+            navbarItems.classList.toggle("hidden") 
+        })
+    }
+    </script>
 </html>
