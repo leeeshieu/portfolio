@@ -26,8 +26,11 @@
     <title>Alicia Kirana</title>
 
     <!-- Fonts -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Unbounded">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+
+    <!-- jQuery -->
+    <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
 
     <!-- Tailwind & Styling -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -45,23 +48,15 @@
               },
               fontFamily: {
                 'primary': 'Inter',
+                'heading': 'Montserrat',
               },
           }
       }
     </script>
     <style>
       * {
-        font-family: 'Unbounded';
-        font-size: 12px;
-      }
-  
-      p, strong {
         font-family: 'Inter';
         font-size: 16px;
-      }
-
-      strong {
-        font-weight: bolder;
       }
   
       *, *::before, *::after {
@@ -72,48 +67,36 @@
   <body class="min-h-screen flex flex-col bg-background"> 
     <noscript>You need to enable JavaScript to run this app.</noscript>
 
-    <nav class="bg-white sticky top-0 border-gray-200 px-6 sm:px-4 py-4">
-      <div class="container flex flex-wrap justify-between items-center mx-auto w-full">
-        <a href="%PUBLIC_URL%/" class="flex items-center">
-          <span class="self-center text-xl text-gray-900 font-semibold whitespace-nowrap">Alicia Kirana</span>
+    <nav class="bg-white sticky top-0 border-gray-200 md:h-0">
+      <div class="bg-white container flex flex-wrap justify-between items-center mx-auto w-full px-4 py-2">
+        <a href="%PUBLIC_URL%/" id="home" class="flex items-center">
+          <span class="self-center text-xl text-gray-900 font-heading font-bold whitespace-nowrap ">Alicia Kirana</span>
         </a>
 
         <button id="hamburgerNavbar" data-collapse-toggle="mobile-menu-2" type="button" class="inline-flex items-center p-2 ml-1 text-sm text-gray-500 rounded-lg hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 md:hidden" aria-controls="mobile-menu-2" aria-expanded="false">
           <span class="sr-only">Open main menu</span>
-          <svg class="w-6 h-6 fill-orange-600" aria-hidden="true" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
+          <svg class="w-6 h-6" aria-hidden="true" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
         </button>
     
-        <!-- Main Navbar -->
         <div class="hidden w-full md:block md:order-1 md:w-auto" id="mobile-menu-2">
-          <ul class="flex flex-col p-4 mt-4 bg-gray-50 rounded-lg md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:bg-white">
-            <li>
-              <a href="%PUBLIC_URL%/" class="block border md:border-0 py-4 pr-4 pl-3 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-orange-600 md:p-0  ">About Me</a>
+          <ul class="flex flex-col p-4 mt-4 rounded-lg text-xl md:flex-row md:space-x-8 md:mt-0 md:bg-white">
+            <li class="mx-auto my-3 lg:my-0">
+              <a href="%PUBLIC_URL%/#about-me" class="font-heading font-semibold text-sm md:border-0 py-4 pr-4 pl-3 text-gray-700 rounded md:hover:underline md:hover:decoration-wavy md:hover:decoration-emerald-400 md:hover:underline-offset-2 md:p-0 ">About Me</a>
             </li>
-            <li>
-              <a href="%PUBLIC_URL%/" class="block border md:border-0 py-4 pr-4 pl-3 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-orange-600 md:p-0  ">Experiences</a>
+            <li class="mx-auto my-3 lg:my-0">
+              <a href="%PUBLIC_URL%/#projects" class="font-heading font-semibold text-sm md:border-0 py-4 pr-4 pl-3 text-gray-700 rounded md:hover:underline md:hover:decoration-wavy md:hover:decoration-pink-400 md:hover:underline-offset-2 md:p-0">Projects</a>
             </li>
-            <li>
-              <a href="%PUBLIC_URL%/" class="block border md:border-0 py-4 pr-4 pl-3 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-orange-600 md:p-0  ">Projects</a>
-            </li>
-            <li>
-              <a href="%PUBLIC_URL%/" class="block border md:border-0 py-4 pr-4 pl-3 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-orange-600 md:p-0">Contacts</a>
+            <li class="mx-auto my-3 lg:my-0">
+              <a href="%PUBLIC_URL%/#contacts" class="font-heading font-semibold text-sm md:border-0 py-4 pr-4 pl-3 text-gray-700 rounded md:hover:underline md:hover:decoration-wavy md:hover:decoration-red-400 md:hover:underline-offset-2 md:p-0">Contacts</a>
             </li>
           </ul>
         </div>
       </div>
     </nav>
 
-    <div id="root" class="h-full place-content-center justify-center items-center p-0 my-auto"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
+    <div id="root" class="h-full justify-center items-center"></div>
 
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
-
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
+    <span class="block py-5 text-sm text-center bg-lime-50">© 2023 Alicia Kirana Utomo. All Rights Reserved.</span>
   </body>
 
   <script>
