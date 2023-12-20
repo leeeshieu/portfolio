@@ -229,9 +229,9 @@ const Seken = () => {
                     <div className="mb-5">
                         <h2 className="mb-3 font-extrabold text-center text-lg lg:text-2xl tracking-tight leading-none">External Links</h2>
                         <div className="flex flex-wrap justify-center">
-                            <a href="https://seken.vercel.app/" className="inline-block mx-2 text-md font-bold px-4 py-2 text-sm text-blue-700 bg-blue-200 rounded-full">SEKEN Company Profile Website</a>
-                            <a href="http://ristek.link/PrototypeHologyPancong" className="inline-block mx-2 text-md font-bold px-4 py-2 text-sm text-pink-700 bg-pink-200 rounded-full">Low Fidelity Prototype</a>
-                            <a href="http://ristek.link/WireframeHologyPancong" className="inline-block mx-2 text-md font-bold px-4 py-2 text-sm text-emerald-700 bg-emerald-200 rounded-full">High Fidelity Prototype</a>
+                            <a href="https://seken.vercel.app/" className="inline-block mx-2 my-2 lg:my-0 text-md font-bold px-4 py-2 text-sm text-blue-700 bg-blue-200 rounded-full">SEKEN Company Profile Website</a>
+                            <a href="http://ristek.link/PrototypeHologyPancong" className="inline-block mx-2 my-2 lg:my-0 text-md font-bold px-4 py-2 text-sm text-pink-700 bg-pink-200 rounded-full">Low Fidelity Prototype</a>
+                            <a href="http://ristek.link/WireframeHologyPancong" className="inline-block mx-2 my-2 lg:my-0 text-md font-bold px-4 py-2 text-sm text-emerald-700 bg-emerald-200 rounded-full">High Fidelity Prototype</a>
                         </div>
                     </div>
                 </div>

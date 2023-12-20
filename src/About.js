@@ -1,7 +1,7 @@
 function About() {
   return (
     <div className="About" id="about-me">
-      <div className="bg-lime-50 py-40">
+      <div className="bg-gray-50 py-40">
         <div className="mx-auto w-9/12 lg:flex">
           <img src="/assets/avatar.jpeg" className="rounded-full h-max mx-auto w-6/12 lg:w-3/12" alt="Avatar" />
           <div className="mt-10 lg:ml-20 lg:my-auto">

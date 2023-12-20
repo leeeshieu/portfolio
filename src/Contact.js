@@ -1,7 +1,7 @@
 const Contact = () => {
     return (
         <div className="Contact" id="contacts">
-            <div className="bg-lime-50 py-40">
+            <div className="bg-gray-50 py-40">
                 <div className="mx-auto rounded-xl lg:w-9/12">
                     <div className="py-8 lg:py-16 px-4 mx-auto max-w-screen-md">
                     <h1 className="mb-8 text-center text-3xl lg:text-5xl font-heading font-extrabold tracking-tight leading-none underline decoration-wavy decoration-amber-400 underline-offset-4">Let's Connect!</h1>
