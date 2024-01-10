@@ -1,0 +1,15 @@
+.Landing {
+    background-color: white;
+    background-image: url("../public/assets/bg-h.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+@media (max-width: 1024px) {
+    .Landing {
+        background-color: white;
+        background-image: url("../public/assets/bg-v.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+    }   
+}
